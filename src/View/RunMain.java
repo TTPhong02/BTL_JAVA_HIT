@@ -33,7 +33,7 @@ public class RunMain {
             System.out.println(".___________________________________________________________.");
             System.out.println("    |                                                   |");
             System.out.println("    |               1 : SignIn                          |");
-            System.out.println("    |               2 : Create A New Account            |");
+            System.out.println("    |               2 : SignUp                          |");
             System.out.println("    |               3 : Exit                            |");
             System.out.println("    |                                                   |  / \\");
             System.out.println("     \\___________________________________________________\\___/");
@@ -276,10 +276,9 @@ public class RunMain {
             System.out.println("|        3 : Search by Type                |");
             System.out.println("|        4 : Search by Price               |");
             System.out.println("|        5 : Search by Color               |");
-            System.out.println("|        6 : Search by Discount            |");
-            System.out.println("|        7 : Search Price Decrease         |");
-            System.out.println("|        8 : Search Price Increase         |");
-            System.out.println("|        9 : Back                          |");
+            System.out.println("|        6 : Search Price Decrease         |");
+            System.out.println("|        7 : Search Price Increase         |");
+            System.out.println("|        8 : Back                          |");
             System.out.println("<================! Welcome !===============>");
             System.out.println("Nhập lựa chọn ");
             m = sc.nextInt();
@@ -299,16 +298,16 @@ public class RunMain {
                 case 5:
                     shopController.searchProductByColor();
                     break;
+//                case 6:
+//                    billController.searchProductByDiscount(bills);
+//                    break;
                 case 6:
-                    billController.searchProductByDiscount(bills);
-                    break;
-                case 7:
                     shopController.searchProductBySortDecrease();
                     break;
-                case 8:
+                case 7:
                     shopController.searchProductBySortIncrease();
                     break;
-                case 9 :
+                case 8 :
                     if(personList.get(0).getPermission().compareToIgnoreCase("Admin")==0){
                         Admin();
                     }else{
