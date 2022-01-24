@@ -1,9 +1,9 @@
-package Basic;
+package Model;
 
 import java.util.Scanner;
 
 public class Shoes {
-    private String idShoes;
+    private Integer idShoes;
     private String nameShoes;
     private String idType;
     private String nameType;
@@ -15,33 +15,13 @@ public class Shoes {
     public Shoes(){
 
     }
-    public void NHAP(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Nhập id kiểu: ");
-        idType = sc.nextLine();
-        System.out.println("Nhâp tên kiểu: ");
-        nameType = sc.nextLine();
-        System.out.println("Nhập id Giày: ");
-        idShoes = sc.nextLine();
-        System.out.println("Nhập tên Giày: ");
-        nameShoes = sc.nextLine();
-        System.out.println("Nhập màu : ");
-        color = sc.nextLine();
-        System.out.println("Nhập size: ");
-        size = sc.nextLine();
-        System.out.println("Nhập xuất sứ: ");
-        origin = sc.nextLine();
-        System.out.println("Nhập giá: ");
-        price = sc.nextDouble();
-        System.out.println("Nhập số lượng:");
-        quantity = sc.nextInt();
+
+    public void display(){
+        System.out.printf("%1s %5s %1s %30s %1s %8s %1s %20s %1s %20s %1s %20s %1s %20s %1s %20s %3s  \n","|",idShoes,"|",nameShoes,"|", idType,"|", nameType,"|",color,"|",price,"|",origin,"|",quantity,"|");
+        System.out.println("|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|");
     }
 
-    public void XUAT(){
-        System.out.printf("%10s %20s %20s %20s %20s %20s %20s %20s  \n",idType,nameType, idShoes, nameShoes,color,price,origin,quantity);
-    }
-
-    public Shoes(String idShoes, String nameShoes, String idType, String nameType, String color, String size, Double price, String origin, Integer quantity) {
+    public Shoes(Integer idShoes, String nameShoes, String idType, String nameType, String color, String size, Double price, String origin, Integer quantity) {
         this.idShoes = idShoes;
         this.nameShoes = nameShoes;
         this.idType = idType;
@@ -53,11 +33,11 @@ public class Shoes {
         this.quantity = quantity;
     }
 
-    public String getIdShoes() {
+    public Integer getIdShoes() {
         return idShoes;
     }
 
-    public void setIdShoes(String idShoes) {
+    public void setIdShoes(Integer idShoes) {
         this.idShoes = idShoes;
     }
 

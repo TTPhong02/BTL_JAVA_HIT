@@ -1,11 +1,9 @@
-package Basic;
-
-import com.sun.security.jgss.GSSUtil;
+package Model;
 
 import java.util.Scanner;
 
 public class Person {
-    protected String id;
+    protected Integer id;
     protected String userName;
     protected String password;
     protected String namePerson;
@@ -14,19 +12,8 @@ public class Person {
     protected String phoneNumber;
     protected String email;
     protected String permission;
-    public Person() {
-}
-    public void Nhap(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Nhập thong tin !");
-        System.out.println("Nhập Username : ");
-        userName = sc.nextLine();
-        System.out.println("Nhập password: ");
-        password = sc.nextLine();
-        System.out.println("Nhập name: ");
-        System.out.println("");
-    }
-    public Person(String id, String userName, String password, String namePerson, Integer age, String address, String phoneNumber,String email,String permission) {
+    public Person() {}
+    public Person(Integer id, String userName, String password, String namePerson, Integer age, String address, String phoneNumber,String email,String permission) {
         this.id = id;
         this.userName = userName;
         this.password = password;
@@ -38,11 +25,11 @@ public class Person {
         this.permission = permission;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -109,7 +96,10 @@ public class Person {
     public void setPermission(String permission) {
         this.permission = permission;
     }
-
+    public void display(){
+        System.out.printf("%1s %5s %1s %30s %1s %20s %1s %8s %1s %20s %1s %20s %1s %30s %1s %15s %3s  \n","|",id,"|",userName,"|",namePerson,"|", age,"|",address,"|",phoneNumber,"|",email,"|",permission,"|");
+        System.out.println("|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|");
+    }
     @Override
     public String toString() {
         return "Person{" +

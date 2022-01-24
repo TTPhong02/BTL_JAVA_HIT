@@ -1,6 +1,4 @@
-package Basic;
-
-import Basic.Shoes;
+package Model;
 
 import java.util.Scanner;
 
@@ -11,20 +9,6 @@ public class Shop {
     int n;
 
     public Shop() {
-    }
-    public void NHAP(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Nhập địa chỉ Shop: ");
-        addressShop = sc.nextLine();
-        System.out.println("Nhập hotline: ");
-        hotLine = sc.nextLine();
-        System.out.println("Nhập các mẫu giày: ");
-        n = sc.nextInt();
-        shoes  = new Shoes[n];
-        for(int i =0 ; i < n ; i++){
-            shoes[i] = new Shoes();
-            shoes[i].NHAP();
-        }
     }
 
     public Shop(String addressShop, String hotlIne) {
@@ -60,7 +44,7 @@ public class Shop {
         System.out.printf("%100s","Thông tin các mẫu giày\n");
         System.out.printf("%10s %20s %20s %20s %20s %20s %20s %20s \n" ,"Mã kiểu","Tên Kiểu", "Mã giày", "Tên Giày","Màu","Giá","Xuất sứ","Số lượng");
         for( int i =0 ; i < n ; i++){
-            shoes[i].XUAT();
+            shoes[i].display();
         }
     }
 }
